@@ -1,0 +1,11 @@
+# Questasim work folder
+work/
+vsim.wlf
+transcript
+
+# MacOS store file
+.DS_Store
+
+# Lock Files
+.~lock.*
+~*
