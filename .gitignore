@@ -3,9 +3,16 @@ work/
 vsim.wlf
 transcript
 
+# Questasim garbage
+modelsim.ini
+vlog.opt
+
 # MacOS store file
 .DS_Store
 
 # Lock Files
 .~lock.*
 ~*
+
+# My file I am printing to for the dataflow VHDL
+loop.txt
