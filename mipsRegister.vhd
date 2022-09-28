@@ -87,9 +87,17 @@ architecture structural of mipRegister is
     signal select_vector : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
     -- Create an array of the vectors to act as signal wires programatically
     type vector32 is array (natural range <>) of std_logic_vector(31 downto 0);
-    signal registerVector : vector32(31 downto 0);
+    -- Create an array of size 32 of 32 bit vectors
+    signal registerVector : vector32 (0 to 31);
 
 begin
+    -- Use the decoder to enable write enable on the right register
+    DECODER : fiveToThirtyTwoDecoder
+        port map(
+            data_input => write_select,
+            EN => i_WriteEnable,
+            data_output => select_vector);
+    
     -- Create a register bank
     REGISTER0 : dffg_N
         generic map(32)
@@ -108,14 +116,6 @@ begin
                 i_Data => i_Data,
                 o_Data => registerVector(i));
     end generate REGISTER_BANK;
-
-    -- Use the decoder to enable write enable on the right register
-    DECODER : fiveToThirtyTwoDecoder
-        port map(
-            data_input => write_select,
-            EN => i_WriteEnable,
-            data_output => select_vector);
-    
     -- Create the read ports
 
     firstReadPort : thirtyTwoBitMux
@@ -158,7 +158,7 @@ begin
     
     secondReadPort : thirtyTwoBitMux
         port map(
-            i_SEL => read1_select,
+            i_SEL => read2_select,
             EN => '1',
             data_output => readPort2,
             data_input0 => registerVector(0),

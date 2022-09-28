@@ -1,11 +1,38 @@
+def countToBinary(count):
+	array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	array[count] = 1
+	returnString = ""
+	for i in array:
+		returnString = returnString + str(i)
+	return returnString
+
+
 count = 0
+invertCount = 31
+thing = "{:b}".format(count) # Gets binary like '00000'
+indent = '        '
 for i in range(2):
 	for j in range(2):
 		for k in range(2):
 			for l in range(2):
 				for m in range(2):
+
+
+					# Prints all the registers with read1 starting at 0, and read2 starting at 31
+					
+					print(indent + 's_READADDR1 <= "' + "{:b}".format(count).rjust(5, '0') + '";')
+					print(indent + 's_READADDR2 <= "' + "{:b}".format(invertCount).rjust(5, '0') + '";')
+					print(indent + 'wait for gCLK_HPER * 2;')
+					print()
+					# Prints loading all the registers with with a single bit
+					#print(indent + 's_D <= "' + countToBinary(count) +'";')
+					#print(indent + 's_WRITEADDR <= "' + f"{i}{j}{k}{l}{m}" +'";')
+					#print(indent + 'wait for gCLK_HPER * 2;')
+					#print()
+					
+					#string = string + 'data_input' + str(count) + ', '
 					# Print the values for the register file
-					print(f'                data_input{count} => registerVector({count}),')
+					#print(f'                data_input{count} => registerVector({count}),')
 					
 					# For whole register file
 					#print(f'    signal data_{count} : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";')
@@ -53,7 +80,10 @@ for i in range(2):
 					# print("        wait for gCLK_HPER * 2;")
 					# print()
 
-					count = count + 1
 					# This prints out the process for dataflow VHDL fir 5 to 32 decoder
 					#print(f'        when "{i}{j}{k}{l}{m}" => data_output({count}) <= \'1\';')
 					#count = count + 1
+
+					count = count + 1
+					invertCount = invertCount - 1
+
