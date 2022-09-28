@@ -58,7 +58,7 @@ architecture mixed of thirtyTwoBitMux is
 
 begin
 
-process(i_SEL, EN)
+process(i_SEL, EN, data_input0, data_input1, data_input2, data_input3, data_input4, data_input5, data_input6, data_input7, data_input8, data_input9, data_input10, data_input11, data_input12, data_input13, data_input14, data_input15, data_input16, data_input17, data_input18, data_input19, data_input20, data_input21, data_input22, data_input23, data_input24, data_input25, data_input26, data_input27, data_input28, data_input29, data_input30, data_input31)
 begin
     data_output <= "00000000000000000000000000000000";
     if (EN = '1') then
