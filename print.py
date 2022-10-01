@@ -17,13 +17,22 @@ for i in range(2):
 			for l in range(2):
 				for m in range(2):
 
+					# Prints the rough outline for code I want to run
+					print(indent + '----- Loop Number ' + str(count))
+					print(indent + 's_nAdd_Sub <= \'0\';')
+					print(indent + 's_ALUSrc <= \'1\';')
+					print(indent + 'i_Immediate <= "0h0000";')
+					print(indent + 's_read1_sel <= "0h00";')
+					print(indent + 's_read2_sel <= "0h00";')
+					print(indent + 'write_sel <= 0h00";')
+					print()
 
 					# Prints all the registers with read1 starting at 0, and read2 starting at 31
 					
-					print(indent + 's_READADDR1 <= "' + "{:b}".format(count).rjust(5, '0') + '";')
-					print(indent + 's_READADDR2 <= "' + "{:b}".format(invertCount).rjust(5, '0') + '";')
-					print(indent + 'wait for gCLK_HPER * 2;')
-					print()
+					#print(indent + 's_READADDR1 <= "' + "{:b}".format(count).rjust(5, '0') + '";')
+					#print(indent + 's_READADDR2 <= "' + "{:b}".format(invertCount).rjust(5, '0') + '";')
+					#print(indent + 'wait for gCLK_HPER * 2;')
+					#print()
 					# Prints loading all the registers with with a single bit
 					#print(indent + 's_D <= "' + countToBinary(count) +'";')
 					#print(indent + 's_WRITEADDR <= "' + f"{i}{j}{k}{l}{m}" +'";')
