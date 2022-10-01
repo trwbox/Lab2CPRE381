@@ -70,22 +70,22 @@ begin
         o_O => invert_select_switch
     );
 
+    -- Mux the values
+    muxing : mux2t1_N
+    generic map(N)
+    port map(
+        i_D0 => invert_select_switch,
+        i_D1 => inverted_vector,
+        i_S => nAdd_Sub,
+        o_O => muxed_vector
+    );
+
     -- Invert the muxed value from the previous piece
     inverter : invg_N
     generic map(N)
     port map(
         i_A => invert_select_switch,
         o_F => inverted_vector
-    );
-
-    -- Mux the values
-    muxing : mux2t1_N
-    generic map(N)
-    port map(
-        i_D0 => i_SA,
-        i_D1 => inverted_vector,
-        i_S => nAdd_Sub,
-        o_O => muxed_vector
     );
 
     -- Do the addition

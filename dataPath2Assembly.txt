@@ -1,0 +1,22 @@
+addi    $25, $0, 0          # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+addi    $26, $0, 256        # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $1,  0($25)         # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  4($25)         # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  0($26)         # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  8($25)         # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  4($26)         # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  12($25)        # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  8($26)         # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  16($25)        # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  12($26)        # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  20($25)        # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  16($26)        # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+lw      $2,  24($25)        # Load                      # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+addi    $27, $0, 512        # Load &B[256] into $27     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX
+sw      $1,  -4($27)        # Store                     # mem_Write = 'X', nAdd_Sub = 'X', ALUSrc = 'X', i_Immediate = 0xXXXX, read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0xXX

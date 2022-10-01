@@ -18,4 +18,39 @@ add     $17, $16, $8        # $17 = $16 + $8                # nAdd_Sub = '0', AL
 sub     $18, $17, $9        # $18 = $17 - $9                # nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x11, read2_sel = 0x09, write_sel = 0x12
 add     $19, $18, $10       # $19 = $18 + $10               # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x12, read2_sel = 0x0A, write_sel = 0x13
 addi    $20, $0,  -35       # Place "-35" in $20            # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x14
-add     $21, $19, $20       # $21  = $19 + $20              # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x13, read2_sel = 0x14, write_sel = 0x15
+add     $21, $19, $20       # $21 = $19 + $20              # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x13, read2_sel = 0x14, write_sel = 0x15
+
+#Regsiter Values after
+#running the assembly 
+# $0 = 0
+# $1 = 1
+# $2 = 2
+# $3 = 3
+# $4 = 4
+# $5 = 5
+# $6 = 6
+# $7 = 7
+# $8 = 8
+# $9 = 9
+# $10 = 10
+# $11 = 3
+# $12 = 0
+# $13 = 4
+# $14 = -1
+# $15 = 5
+# $16 = -2
+# $17 = 6
+# $18 = -3
+# $19 = 7
+# $20 = -35
+# $21 = -28
+# $22 = 0
+# $23 = 0
+# $24 = 0
+# $25 = 0
+# $26 = 0
+# $27 = 0
+# $28 = 0
+# $29 = 0
+# $30 = 0
+# $31 = 0
