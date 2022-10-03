@@ -1,0 +1,56 @@
+addi    $1,  $0,  1         # Place "1" in $1               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0001, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x01
+addi    $2,  $0,  2         # Place "2" in $2               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0002, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x02
+addi    $3,  $0,  3         # Place "3" in $3               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0003, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x03
+addi    $4,  $0,  4         # Place "4" in $4               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0004, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x04
+addi    $5,  $0,  5         # Place "5" in $5               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0005, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x05
+addi    $6,  $0,  6         # Place "6" in $6               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0006, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x06
+addi    $7,  $0,  7         # Place "7" in $7               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0007, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x07
+addi    $8,  $0,  8         # Place "8" in $8               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0008, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x08
+addi    $9,  $0,  9         # Place "9" in $9               # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x0009, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x09
+addi    $10, $0,  10        # Place "10" in $10             # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x000A, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x0A
+add     $11, $1,  $2        # $11 = $1 + $2                 # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x01, read2_sel = 0x02, write_sel = 0x0B
+sub     $12, $11, $3        # $12 = $11 - $3                # nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x0B, read2_sel = 0x03, write_sel = 0x0C
+add     $13, $12, $4        # $13 = $12 + $4                # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x0C, read2_sel = 0x04, write_sel = 0x0D
+sub     $14, $13, $5        # $14 = $13 - $5                # nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x0D, read2_sel = 0x05, write_sel = 0x0E
+add     $15, $14, $6        # $15 = $14 + $6                # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x0E, read2_sel = 0x06, write_sel = 0x0F
+sub     $16, $15, $7        # $16 = $15 - $7                # nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x0F, read2_sel = 0x07, write_sel = 0x10
+add     $17, $16, $8        # $17 = $16 + $8                # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x10, read2_sel = 0x08, write_sel = 0x11
+sub     $18, $17, $9        # $18 = $17 - $9                # nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x11, read2_sel = 0x09, write_sel = 0x12
+add     $19, $18, $10       # $19 = $18 + $10               # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x12, read2_sel = 0x0A, write_sel = 0x13
+addi    $20, $0,  -35       # Place "-35" in $20            # nAdd_Sub = '0', ALUSrc = '1', i_Immediate = 0x, read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x14
+add     $21, $19, $20       # $21 = $19 + $20              # nAdd_Sub = '0', ALUSrc = '0', i_Immediate = 0xXXXX, read1_sel = 0x13, read2_sel = 0x14, write_sel = 0x15
+
+#Regsiter Values after
+#running the assembly 
+# $0 = 0
+# $1 = 1
+# $2 = 2
+# $3 = 3
+# $4 = 4
+# $5 = 5
+# $6 = 6
+# $7 = 7
+# $8 = 8
+# $9 = 9
+# $10 = 10
+# $11 = 3
+# $12 = 0
+# $13 = 4
+# $14 = -1
+# $15 = 5
+# $16 = -2
+# $17 = 6
+# $18 = -3
+# $19 = 7
+# $20 = -35
+# $21 = -28
+# $22 = 0
+# $23 = 0
+# $24 = 0
+# $25 = 0
+# $26 = 0
+# $27 = 0
+# $28 = 0
+# $29 = 0
+# $30 = 0
+# $31 = 0

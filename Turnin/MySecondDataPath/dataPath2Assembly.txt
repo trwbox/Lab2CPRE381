@@ -1,0 +1,26 @@
+addi    $25, $0, 0          # Load                      # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '1', i_Immediate = 0,       read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x19
+addi    $26, $0, 256        # Load                      # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '1', i_Immediate = 256,     read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x1a
+lw      $1,  0($25)         # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0,       read1_sel = 0x00, read2_sel = 0x19, write_sel = 0x01
+lw      $2,  4($25)         # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 4,       read1_sel = 0x00, read2_sel = 0x19, write_sel = 0x02
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0x01, read2_sel = 0x02, write_sel = 0x01
+sw      $1,  0($26)         # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0,       read1_sel = 0x01, read2_sel = 0x1a, write_sel = 0x01
+lw      $2,  8($25)         # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 8,       read1_sel = 0x00, read2_sel = 0x19, write_sel = 0x02
+
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0x01, read2_sel = 0x02, write_sel = 0x01
+sw      $1,  4($26)         # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 4,       read1_sel = 0x01, read2_sel = 0x1A, write_sel = 0x01
+lw      $2,  12($25)        # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 12,      read1_sel = 0x00, read2_sel = 0x19, write_sel = 0x02
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0x01, read2_sel = 0x02, write_sel = 0x01
+sw      $1,  8($26)         # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 8,       read1_sel = 0x01, read2_sel = 0xXX, write_sel = 0x01
+lw      $2,  16($25)        # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 16,      read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x02
+
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0x01, read2_sel = 0xXX, write_sel = 0x01
+sw      $1,  12($26)        # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 12,      read1_sel = 0x01, read2_sel = 0xXX, write_sel = 0x01
+lw      $2,  20($25)        # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 20,      read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x02
+
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0x01, read2_sel = 0xXX, write_sel = 0x01
+sw      $1,  16($26)        # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 16,      read1_sel = 0x01, read2_sel = 0xXX, write_sel = 0x01
+lw      $2,  24($25)        # Load                      # mem_Write = '0', mem_read = '1', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 24,      read1_sel = 0x00, read2_sel = 0xXX, write_sel = 0x02
+
+add     $1,  $1, $2         # $1 = $1 + $2              # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = 0xXXXX,  read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0x01
+addi    $27, $0, 512        # Load &B[256] into $27     # mem_Write = '0', mem_read = '0', nAdd_Sub = '1', ALUSrc = '1', i_Immediate = 512,     read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0x1b
+sw      $1,  -4($27)        # Store                     # mem_Write = '1', mem_read = '0', nAdd_Sub = '1', ALUSrc = '0', i_Immediate = -4,      read1_sel = 0xXX, read2_sel = 0xXX, write_sel = 0x01
